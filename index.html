@@ -6,24 +6,118 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+        main{
+            display: grid; /*Allows for the use of grid*/
+            grid-template: 100% / 25% 50% 25%;/*Sets the grid template and rows*/
+            height: 600px;/*Sets height of grid too 600px*/
+            
+        }
+        #part1{
+            grid-column: 1 / 2;/*Takes up columns 1 to 2*/
+            grid-row: 1 / 2;/*Takes up rows 1 to 2*/
+            align-self: center;/*Aligns self to the center*/
+        }
+        #part2{
+            grid-column: 2 / 3;/*Takes up columns 2 to 3*/
+            grid-row: 1 / 2;/*Takes up rows 1 to 2*/
+            text-align: center;/*Aligns self to the center*/
+            font-style: italic;/*Italisizes text*/
+        }
+        #part3{
+            grid-column: 3 / 4;/*Takes up columns 3 to 4*/
+            grid-row: 1 / 2;/*Takes up rows 1 to 2*/
+            align-self: center;/*Aligns self to the center*/
+        }
+        #contactbutton{
+            display: flex;/*Allows for the use of flex*/
+            justify-content: center;/*Horizontally centers content*/
+            text-decoration: none;/*Sets text-decoration to none*/
+            background-color: #004aad;/*Changes background color to blue*/
+            border: 6px solid #002f6f;/*Changes border to 6px solid and dark blue*/
+            padding: 15px;/*Adds 15px of padding*/
+            border-radius: 10px;/*Rounds border by 10px*/
+            margin-top: 40px;/*Adds 40px of margin to the top only*/
+            width: 25%;/*Sets width to 25%*/
+            margin: auto;/*Automatically calcualtes the margin*/
+            transition: 0.3s;/*Sets the transition to 0.3 seconds*/
+            transform: scale(1.2);/*Makes the button 1.2 its initial size*/
+        }
+        #contactbutton a{
+            text-decoration: none;/*Sets text-decoration to none*/
+        }
+        #contactbutton:hover{
+            background-color: #004095;/*Changes background color to blue*/
+            border: 6px solid #00275d;/*Changes border to 6px solid and dark blue*/
+            transform: scale(1.3);/*Makes the button 1.3 its initial size*/
+        }
+        #image1{
+            width: 250px;/*Sets width to 250px*/
+            height: 480px;/*Sets height to 480px*/
+            background-color: #004aad;/*Changes background color to blue*/
+            border: 6px solid #002f6f;/*Changes border to 6px solid and dark blue*/
+            border-radius: 10px;/*Rounds border by 10px*/
+            filter: grayscale(0.5);/*Applies gray filter*/
+            transition: 0.3s;/*Sets the transition to 0.3 seconds*/
+        }
+        #image1:hover{
+            filter: grayscale(0);/*Deletes gray filter*/
+        }
+        #image2{
+            width: 250px;/*Sets width to 250px*/
+            height: 480px;/*Sets height to 480px*/
+            background-color: #004aad;/*Changes background color to blue*/
+            border: 6px solid #002f6f;/*Changes border to 6px solid and dark blue*/
+            border-radius: 10px;/*Rounds border by 10px*/
+            filter: grayscale(0.5);/*Applies gray filter*/
+            transition: 0.3s;/*Sets the transition to 0.3 seconds*/
+        }
+        #image2:hover{
+            filter: grayscale(0);/*Deletes gray filter*/
+        }
+        .imagediv{
+            justify-self: center;/*Horizontally center itself*/
+            align-self: center;/*Vertically center itself*/
+        }
     </style>
 </head>
 <body>
+    <header>
     <div>
-    <a href="index.html" class="title">Valentino's Website</a>
+    <a href="index.html" class="title">Valentino's Website</a> <!--Makes a link that refreshes the page-->
     <div class="navbar">
-        <a href="index.html" class="button">Home</a>
-        <a href="timeline.html" class="button">Timeline</a>
-        <a href="blog.html" class="button">Blog</a>
-        <a href="contact.html" class="button">Contact</a>
+        <a href="index.html" class="button">Home</a><!--Makes a button that takes you to HOME-->
+        <a href="timeline.html" class="button">Timeline</a><!--Makes a button that takes you to TIMELINE-->
+        <a href="blog.html" class="button">Blog</a><!--Makes a button that takes you to BLOG-->
+        <a href="contact.html" class="button">Contact</a><!--Makes a button that takes you to CONTACT-->
     </div>
-    </div>
+    </header>
+    <main>
+        <div id="part1"> <!--Div for left section of the page-->
+            <div class="imagediv"><!--Div for image1-->
+                <img src="Images/Untitled (250 x 400 px) (250 x 480 px) (250 x 480 px).png" id="image1"><!--Img of older me-->
+            </div>
+        </div>
+        <div id="part2"> <!--Div for middle section of the page-->
+            <h1 style="margin-top: 80px;">Welcome To My Website!</h1>
+            <h3>This website is used for many purposes including, random things I come accross, a brief history of myself, and it is a place to easily contact me. If you have any comments or suggestions contact me.</h3>
+            <h2 style="text-decoration: underline;">About Valentino</h2>
+            <h3 style="margin-bottom: 50px;">I am Valentino Simeonidis and I currently am a Blue Teamer at TD Bank where I have been working for the last 7 years. I enjoy gaming, dancing, coding, and creating youtube videos. If you would like to contact me about a freelance job or just want to discuss one of my videos you can contact me using the button below.</h3>
+            <div id="contactbutton">
+            <a href="contact.html">Contact Me!</a><!--Button that sends user to contact page-->
+            </div>
+        </div>
+        <div id="part3"><!--Div for right section of the page-->
+            <div class="imagediv"><!--Div for image2-->
+                <img src="Images/Untitled (250 x 400 px) (250 x 480 px) (250 x 480 px) (1).png" id="image2"><!--Img of me in a suit-->
+            </div>
+        </div>
+    </main>
     <footer style="width:auto;">
         <p>&copy; Valentino's Website 2035</p>
-        <a href="index.html" class="footerlink" style="margin-left: 65%;"> Home | </a>
-        <a href="timeline.html" class="footerlink"> Timeline | </a>
-        <a href="blog.html" class="footerlink"> Blog | </a>
-        <a href="contact.html" class="footerlink"> Contact</a>
+        <a href="index.html" class="footerlink" style="margin-left: 65%;"> Home | </a><!--Link to HOME-->
+        <a href="timeline.html" class="footerlink"> Timeline | </a><!--Link to TIMELINE-->
+        <a href="blog.html" class="footerlink"> Blog | </a><!--Link to BLOG-->
+        <a href="contact.html" class="footerlink"> Contact</a><!--Link to CONTACT-->
     </footer>
 </body>
 </html>
